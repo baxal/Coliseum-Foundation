@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
-    public float runSpeed = 3f;
+    public float runSpeed = 50f;
 
     void Start()
     {
@@ -21,9 +21,9 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKey(KeyCode.LeftShift)) //Shift to run
-        runSpeed = 5f;
+        runSpeed = 75f;
         else
-        runSpeed = 3f;
+        runSpeed = 50f;
     }
 
     private void FixedUpdate()
